@@ -6,7 +6,7 @@ Esto es una prueba
 
 Inicialmente para la realizacion del laboratorio se procede a realizar el diseño del restados tal como se muestra a continuacion: 
 
-<h3> RESTADOR <h3>
+** RESTADOR **
 
 Para realizar la implementacion del restador se hizo uso del sumador, pero dado que para este es necesario tener en cuenta el signo, se agrego como salida la variable neg la cual nos indicara si el resultado es negativo o positivo.
 
