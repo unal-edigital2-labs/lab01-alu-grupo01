@@ -6,16 +6,16 @@ module alu(
     input [2:0] portB,
     input [1:0] opcode,
     output [0:6] sseg,
-    output [3:0] an,
+    output [4:0] an,
     input clk,
     input rst
  );
 
 // Declaración de salidas de cada bloque 
-wire [3:0] sal_suma;
-wire [3:0] sal_resta;
-wire [3:0] sal_div;
-wire [5:0] sal_mult;
+wire [4:0] sal_suma;
+wire [4:0] sal_resta;
+wire [4:0] sal_div;
+wire [4:0] sal_mult;
 
 
 // Declaración de las entradas init de cada bloque 
@@ -61,12 +61,13 @@ always @(*) begin
 	
 end
 
-
+assign an = int_bcd;
 //instanciación de los componnetes 
 
-sum4b sum(. init(init_suma),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_suma));
+sum4b sum( .init(init_suma),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_suma));
+restador res( .init(init_resta), .xi(portA), .yi(portB), .neg(sal_resta[4]), .sal(sal_resta[3:0]));
 multiplicador mul ( .MR(portA), .MD(portB), .init(init_mult),.clk(clk), .pp(sal_mult));
-display dp( .num(int_bcd), .clk(clk), .sseg(sseg), .an(an), .rst(rst));
+BCDtoSSeg dp( .BCD(int_bcd), .SSeg(sseg));
 
 // adicone los dos bloques que hacen flata la resta y división
 

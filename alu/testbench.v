@@ -33,7 +33,7 @@ module testbench;
 
 	// Outputs
 	wire [0:6] sseg;
-	wire [3:0] an;
+	wire [4:0] an;
 
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
@@ -53,7 +53,7 @@ module testbench;
 		clk = 0;
 		rst = 1;
 		portA=5;
-		portB=3;
+		portB=2;
 		
 		// Wait 100 ns for global reset to finish
 		#10;
@@ -69,6 +69,7 @@ module testbench;
 		
 		#50 opcode = 3;
 		
+		#50 $finish;
 	end
    
 	always #1 clk = ~clk;
