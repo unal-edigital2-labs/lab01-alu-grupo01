@@ -2,8 +2,6 @@
 ## Introducción
 
 
-Esto es una prueba
-
 Inicialmente para la realizacion del laboratorio se procede a realizar el diseño del restados tal como se muestra a continuacion: 
 
 <h4> RESTADOR </h4>
