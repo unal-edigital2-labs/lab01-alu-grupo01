@@ -23,4 +23,8 @@ always @(*) begin
 end
 ```
 
+<h4> MULTIPLICADOR </h4>
 
+<h4> ALU </h4>
+
+<h4> 7 SEGMENTOS </h4>
