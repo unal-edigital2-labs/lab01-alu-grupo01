@@ -27,4 +27,6 @@ end
 
 <h4> ALU </h4>
 
+Ahora para la implementacion correcta de la ALU con las tres operaciones que se presentan que son la suma, la resta y la multiplicacion se procedio primeramente a crear una variable 
+
 <h4> 7 SEGMENTOS </h4>
