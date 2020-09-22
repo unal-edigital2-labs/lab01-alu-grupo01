@@ -23,10 +23,21 @@ always @(*) begin
 end
 ```
 
-<h4> MULTIPLICADOR </h4>
-
 <h4> ALU </h4>
 
-Ahora para la implementacion correcta de la ALU con las tres operaciones que se presentan que son la suma, la resta y la multiplicacion se procedio primeramente a crear una variable 
+Ahora para la implementacion correcta de la ALU con las tres operaciones que se presentan que son la suma, la resta y la multiplicacion se procedio primeramente a crear cada una de las variables que eran necesarias. Iniciando asi por las dos entradas ```portA``` y ```portB```: 
 
-<h4> 7 SEGMENTOS </h4>
+``` verilog
+module alu(
+    input [2:0] portA,
+    input [2:0] portB,
+    input [1:0] opcode,
+    output [0:6] sseg,
+    output [4:0] an,
+    input clk,
+    input rst
+ );
+
+``` 
+
+
