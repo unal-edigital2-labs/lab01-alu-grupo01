@@ -1,1 +1,1 @@
-El modulo ultrasonido
+El sensor ultrasonido utilizado para la realizacion del proyecto fue el HC-SR04. Esta dispositivo fue usado con el proposito de realizar el mapeo del laberinto y asi poder detectar los obstaculos o en nuestro caso las paredes y del mismo modo los caminos que se encontraban libres. Por otra parte, primero observaremos el driver implementado para lograr un correcto funcionamiento de este dispositivo. 
